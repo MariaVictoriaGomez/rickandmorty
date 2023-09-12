@@ -266,3 +266,13 @@ footer{
     transform: translatey(-100%);
   }
 }
+
+@media (max-width:500px) {
+  .titulo{
+    margin-top: 8rem;
+  }
+
+  #filtro-menu{
+    margin-top:3rem ;
+  }
+}
