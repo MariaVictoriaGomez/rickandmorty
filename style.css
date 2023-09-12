@@ -19,6 +19,8 @@ body {
   z-index: -1;
 }
 
+
+
 .contenedor {
   width: 90%;
    background-size: cover;
@@ -51,6 +53,7 @@ body {
   justify-content: center;
   gap:27px;
   margin-top: 1em;
+  flex-wrap: wrap;
 }
 
 #aplicar-filtro{
