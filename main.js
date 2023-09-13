@@ -6,6 +6,7 @@ const btnNext = document.getElementById("btn-next");
 const btnFiltrar = document.getElementById("btnFiltrar");
 const filtroMenu = document.getElementById("filtro-menu");
 const aplicarFiltroBtn = document.getElementById("aplicar-filtro");
+const nameFilter = document.getElementById("name-filters"); //barra de filtrado por nombre
 
 //Variables para controlar la paginación y los filtros:
 let currentPage = 1; // Página actual
@@ -139,3 +140,10 @@ aplicarFiltroBtn.addEventListener("click", () => {
 });
 
 //cosas que no me tengo que olvidar: para que la paginacion funcione con los filtros se hace un nuevo llamado a la api y se renderiza de nuevo.Para eso hay que crear una funcion que busque los datos de la api con los filtros aplicados.
+
+nameFilter.addEventListener("input", () => {
+  const nameValue = nameFilter.value.trim(); // Obtiene el valor del filtro de nombre y elimina espacios en blanco al principio y al final.
+  currentFilters["name"] = nameValue; // Agrega el filtro de nombre a los filtros actuales.
+  currentPage = 1; // Restablece la página actual a 1 cuando se aplica un filtro.
+  obtenerInfoCards(currentPage, currentFilters); // Llama a obtenerInfoCards con el nuevo filtro de nombre.
+});

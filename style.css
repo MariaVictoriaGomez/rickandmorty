@@ -45,6 +45,14 @@ body {
   border-radius: 5px;
 }
 
+#barfilter input{
+  border-radius: 3px;
+  margin-left: 7rem;
+  background-color: #131316c4;
+  border: none;
+  padding: 0.8rem;
+}
+
 /*columnas de opciones y botón */
 .columna {
   display: flex;
