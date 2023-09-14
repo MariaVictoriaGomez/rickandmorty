@@ -52,10 +52,14 @@ body {
   border: none;
   padding: 0.8rem;
   color:#fff;
+  box-shadow: 0 0 2px #ccc;
+  font-size: 14px;
 }
 
-#barfilter:focus{
-  border-color: #f40a0e;
+#barfilter input:hover{
+  background-color: #f2ebebf8;
+  color: #0d0d0db5;
+  border: solid 1px #f3f3f4;
 }
 /*columnas de opciones y botón */
 .columna {
@@ -267,6 +271,7 @@ footer{
   
   display: flex;
   justify-content: center;
+  padding: 2rem;
 
 }
 
