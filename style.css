@@ -297,4 +297,7 @@ footer{
   #filtro-menu{
     margin-top:3rem ;
   }
+  #barfilter input{
+    margin-left: 3rem;
+  }
 }
