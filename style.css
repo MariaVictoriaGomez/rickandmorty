@@ -242,7 +242,7 @@ body {
 }
 .btn-next,
 .btn-prev {
-  padding: 10px 20px;
+  padding: 1px 17px;
   border-radius: 5px;
   border: none;
   background-color: #ec87d8;
@@ -276,7 +276,7 @@ body {
   box-shadow: 0 2px 4px #fa74df;
 }
 button {
-  padding: 5px 10px;
+  padding: 5px 6px;
   border-radius: 5px;
   border: none;
   background-color: #ec87d8;
