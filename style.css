@@ -262,6 +262,19 @@ body {
   box-shadow: 0 2px 4px #fa74df;
 }
 
+#btn-first-page:hover{
+  background-color: #a5dd8f;
+  color: #000000;
+  transform: translateY(-5px);
+  box-shadow: 0 2px 4px #fa74df;
+}
+
+#btn-last-page:hover{
+  background-color: #a5dd8f;
+  color: #000000;
+  transform: translateY(-5px);
+  box-shadow: 0 2px 4px #fa74df;
+}
 button {
   padding: 5px 10px;
   border-radius: 5px;

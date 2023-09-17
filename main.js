@@ -147,3 +147,20 @@ nameFilter.addEventListener("input", () => {
   currentPage = 1; // Restablece la página actual a 1 cuando se aplica un filtro.
   obtenerInfoCards(currentPage, currentFilters); // Llama a obtenerInfoCards con el nuevo filtro de nombre.
 });
+
+
+// Evento de clic al botón "Primera Página"
+const btnFirstPage = document.querySelector(".first-page");
+btnFirstPage.addEventListener("click", () => {
+  currentPage = 1;
+  obtenerInfoCards(currentPage, currentFilters);
+});
+
+// Evento de clic al botón "Última Página"
+const btnLastPage = document.querySelector(".last-page");
+btnLastPage.addEventListener("click", () => {
+  if (originalData) {
+    currentPage = originalData.info.pages;
+    obtenerInfoCards(currentPage, currentFilters);
+  }
+});
