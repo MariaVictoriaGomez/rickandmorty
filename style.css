@@ -284,6 +284,11 @@ button {
   font-size: 100%;
   font-family: "Lato", sans-serif;
 }
+#page-info{
+  font-weight: bold;
+  display: flex;
+  padding: 1rem;
+}
 
 footer{
   

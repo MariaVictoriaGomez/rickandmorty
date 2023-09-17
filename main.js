@@ -7,6 +7,14 @@ const btnFiltrar = document.getElementById("btnFiltrar");
 const filtroMenu = document.getElementById("filtro-menu");
 const aplicarFiltroBtn = document.getElementById("aplicar-filtro");
 const nameFilter = document.getElementById("name-filters"); //barra de filtrado por nombre
+const pageSpan = document.getElementById("page-info");// numero de paginas
+
+//info de la página actual y el número total de páginas
+const updatePageInfo = (currentPage, totalPages) => {
+  pageSpan.textContent = `${currentPage} - ${totalPages}`;
+};
+
+
 
 //Variables para controlar la paginación y los filtros:
 let currentPage = 1; // Página actual
@@ -37,6 +45,8 @@ const obtenerInfoCards = (page, filters = {}) => {
       } else {
         btnPrev.disabled = false; // Habilitar el botón "Anterior"
       }
+      updatePageInfo(page, data.info.pages);
+
     });
 };
 
@@ -83,13 +93,19 @@ const restoreInfo = () => {
 };
 // Agrega event listeners a los botones "Anterior" y "Siguiente" para la paginación. Cuando se hace clic en el botón "Anterior", se disminuye el valor de currentPage en 1 y se llama a la función obtenerInfoCards. Pasa lo mismo con el boton siguiente.
 btnPrev.addEventListener("click", () => {
+  if (currentPage > 1){
   currentPage -= 1;
   obtenerInfoCards(currentPage, currentFilters);
+  updatePageInfo(currentPage,originalData.info.pages);
+}
 });
 
 btnNext.addEventListener("click", () => {
+  if (currentPage < originalData.info.pages) {
   currentPage += 1;
   obtenerInfoCards(currentPage, currentFilters);
+  updatePageInfo(currentPage, originalData.info.pages);
+}
 });
 
 // Evento de clic al botón "Filtrar" para mostrar/ocultar el menú
