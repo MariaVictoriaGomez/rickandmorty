@@ -237,7 +237,7 @@ body {
   margin-left: 46px;
   margin-top: 15px;
   margin-bottom: 15px;
-  justify-content: flex-end;
+  justify-content: center;
   margin-right: 60px;
 }
 .btn-next,
@@ -293,6 +293,23 @@ footer{
 
 }
 
+.redes{
+  padding: 1px;
+}
+.redes a{
+  margin-right: 5px;
+  margin-left: 10px ;
+}
+
+.redes img{
+  width: 20px;
+  height: 20px;
+  filter:brightness(0.5);
+}
+
+.redes img:hover{
+  filter:brightness(1);
+}
 @keyframes moveGalaxy {
   0% {
     transform: translatey(0%);
