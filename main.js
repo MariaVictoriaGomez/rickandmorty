@@ -153,7 +153,14 @@ aplicarFiltroBtn.addEventListener("click", () => {
   // Aplicar los filtros y cargar la primera página
   currentPage = 1;
   obtenerInfoCards(currentPage, currentFilters);
+
+//cuando hago clic en el boton Aplicar Filtro desaparece filtro-menu y vuelve a aparecer el boton btnFiltrar
+  filtroMenu.style.display = "none";
+  btnFiltrar.style.display = "block";
+
 });
+
+
 
 //cosas que no me tengo que olvidar: para que la paginacion funcione con los filtros se hace un nuevo llamado a la api y se renderiza de nuevo.Para eso hay que crear una funcion que busque los datos de la api con los filtros aplicados.
 
